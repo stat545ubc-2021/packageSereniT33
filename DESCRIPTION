@@ -1,0 +1,23 @@
+Package: Stat545B2
+Title: A Package For STAT 545B
+Version: 0.1.0
+Authors@R: 
+    person(given = "Serena",
+           family = "Choi",
+           role = c("aut", "cre"),
+           email = "serenachoi992@gmail.com")
+Description: This package is developed as an assignment B-2 for the STAT 545B course.
+            Give 'delta()' function to find the differences between maximum and minimum values.
+Imports: 
+      dplyr, tidyr, tidyverse, datateachr
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Suggests: 
+    rmarkdown,
+    knitr,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr

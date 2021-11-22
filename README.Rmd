@@ -1,0 +1,49 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Stat545B2
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+This package is developed as an assignment B-2 for the STAT 545B course.
+Give 'delta()' function to find the differences between maximum and minimum values.
+
+## Installation
+
+Stat545B2 is not yet on CRAN. But, you can download it from this repository using the following R command:
+
+``` r
+devtools::install_github("SereniT33/packageSereniT33")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r}
+library(Stat545B2)
+library(datateachr)
+library(tidyverse)
+pivoted_flow_sample <- flow_sample %>%
+  pivot_wider("year", names_from = "extreme_type", values_from = "flow") %>%
+  group_by(year) %>%
+  mutate(maximum = as.numeric(maximum)) %>%
+  mutate(minimum = as.numeric(minimum)) 
+
+delta(pivoted_flow_sample, "maximum", "minimum")
+```
+
+Note that this package requires the data set that has columns for maximum and minimum values for each observation, in this case, year. 
