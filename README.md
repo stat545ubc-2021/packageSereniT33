@@ -16,7 +16,7 @@ Stat545B2 is not yet on CRAN. But, you can download it from this
 repository using the following R command:
 
 ``` r
-devtools::install_github("SereniT33/functionsSereniT33")
+devtools::install_github("SereniT33/packageSereniT33")
 ```
 
 ## Example
